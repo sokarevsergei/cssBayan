@@ -1,0 +1,112 @@
+/*@media (max-width: 820) {
+    .bayan-img {
+        
+        width: 320px;
+    }
+}
+*/
+
+html{
+    overflow: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.5;
+    min-width: 320px;
+    background-color: #030370;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1{
+    color: #fff;
+}
+
+/* Bayan */
+
+.bayan-container {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.bayan-item {
+    margin-bottom: 30px;
+    border: 1px solid rgb(91, 97, 213);
+    
+}
+
+.bayan-title {
+    display: block;
+    padding: 10px 15px;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    transition: .5s all;
+}
+
+.bayan-title:after {
+    content: "";
+    display: block;
+
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #fff transparent transparent transparent;
+
+    position: absolute;
+    top: 50%;
+    right: 15px;
+
+    transform: translateY(-50%);
+}
+
+.bayan-title:hover {
+    background-color: #1711b9;
+}
+
+.bayan-input {
+    width: 0;
+    height: 0;
+
+    appearance: none;
+
+    position: absolute;
+    
+    transition-duration: 500ms;
+    transition-property: transform;
+}
+
+.bayan-input:hover ~ .bayan-title {
+    background-color: #26509e;
+}
+
+.bayan-input:hover ~ .bayan-title:after {
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent #fff transparent;
+    
+}
+
+.bayan-input:hover ~ .bayan-img {
+    display: block;
+}
+.bayan-input:checked ~ .bayan-img {
+    display: block;
+}
+
+.bayan-img:hover{
+    background-color: rgb(35, 40, 71);
+}
+
+.bayan-img{
+    display: none;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 14px;
+    transition: 1s;
+}
